@@ -47,8 +47,5 @@ In the learned_schedule folder, we have uploaded few hyperparameter schedules th
 ### Disclaimer
 This code is still not yet perfectly cleaned up and might contain issues. Feel free to contact me if there are anything unclear to you.
 
-### License
-This code follows the MIT License.
-
 ### Known Issue
 When running PBT on Slurm-based cluster, the controller will occupy one gpu without really using it since the controller will not train any model. One possible way to alleviate this temporarly is by starting the controller first and then start the workers. But this would need the user taking care that the workers know the directory which stores the server connect file.
