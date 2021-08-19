@@ -202,13 +202,6 @@ class PBTWorker:
         if not os.path.isdir(path):
             os.makedirs(path)
         return path
-    
-    def _get_last_model_path(self, trial):
-        path = os.path.join(
-            self.data_path, str(trial.member_id), str(trial.model_time_step))
-        if not os.path.isdir(path):
-            os.makedirs(path)
-        return path
 
     def _create_extra_data_path(self, trial):
         path = os.path.join(
